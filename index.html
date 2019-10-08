@@ -22,8 +22,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/addons/datatables.min.css" rel="stylesheet">
     <script type="text/javascript" src="js/addons/datatables.min.js"></script>
 
@@ -103,7 +101,7 @@
 
         for (i = 0.7; i <= 1; i += 0.1) {
             x = parseFloat(i).toFixed(1);
-            //console.log(x);
+            
 
             svg.append('defs').append('marker')
                 .attrs({
@@ -530,13 +528,13 @@
             //this works
             if (test_toggle == 0) {
                 var mypath = d3.select('path').filter(function (d) { return d.group == groupId; })
-                console.log(mypath)
+                //console.log(mypath)
 
                 svg.selectAll(".node").filter(function (d) { return d.group == groupId; }).style("opacity", 0)
                 svg.selectAll(".link").filter(function (d) { return d.source.group == groupId && d.target.group == groupId; }).style("opacity", 0)
                 test_toggle = 1
 
-                console.log(groupId)
+              // console.log(groupId)
                 groupScales[groupId] = 0.2
 
             } else {
@@ -634,7 +632,7 @@
             //get NAM value
             var myLoc = document.getElementById("location_select").value
 
-            console.log(myLoc)
+           // console.log(myLoc)
 
             var myNodes = svg.selectAll("circle")
                 .attr("fill", function (d) {
@@ -761,7 +759,7 @@
                     tableData.push(rowData)
                 }
 
-                console.log(3, tableData)
+               // console.log(3, tableData)
                 // test
                 $('#hcpTable').DataTable({
                     data: tableData,
