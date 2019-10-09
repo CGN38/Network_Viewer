@@ -692,7 +692,7 @@
         //    var table = d3.select('#hcpTable')
         //    var thead = table.append('thead')
         //    var tbody = table.append('tbody');
-        //    var columns = ['NPI','last_name','first_name','Address_1','Address_2','specialty','city','state','zip','rank']
+        //    var columns = ['NPI','last_name','first_name','Address_1','Address_2','specialty','city','state','zip','rank','generalpayments_2017']
 
         //    d3.text("hcp_influencers.csv", function (data) {
         //        console.log(data[0])
@@ -754,6 +754,7 @@
                     rowData.push(parsedCSV[i]['state'])
                     rowData.push(parsedCSV[i]['zip'])
                     rowData.push(parsedCSV[i]['rank'])
+                    rowData.push(parsedCSV[i]['generalpayments_2017'])
 
                   //  console.log(2,rowData)
                     tableData.push(rowData)
@@ -774,6 +775,7 @@
                         { title: "state" },
                         { title: "zip" },
                         { title: "rank" },
+                        {title: 'general_payments_2017'}
                     ]
                 });
 
